@@ -12,4 +12,3 @@ def map_to_tuples(letters_list: list) -> list[tuple]:
 
 user_letters = input('').split()
 print(map_to_tuples(user_letters))
-
