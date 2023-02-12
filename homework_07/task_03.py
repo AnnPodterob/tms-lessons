@@ -3,7 +3,7 @@
 # При этом вывести результат нужно вывести сохранив изначальный регистр.
 
 def new_remove_vowels(vowels_list: list):
-    none_letters = ['a', 'o', 'i', 'u', 'e']
+    none_letters = ['a', 'o', 'i', 'u', 'e', 'A', 'O', 'I', 'U', 'E']
     new_list_letters = list(filter(lambda x: x not in none_letters, vowels_list))
     return new_list_letters
 
