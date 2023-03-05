@@ -23,6 +23,12 @@ class WordIterable:
         return self.text[self.current_num -1]
 
 if __name__ == '__main__':
+    assert is_date('12-12-1999')
+    assert not is_date('123-23-1999')
+    assert is_float_number('234.542')
+    assert is_float_number('23.3')
+    assert not is_float_number('341342,432')
+    assert not is_float_number('65473')
     text = 'мама мыла раму'
     text2 = 'Я был слишком беспечен'
     for i in WordIterable(text):
