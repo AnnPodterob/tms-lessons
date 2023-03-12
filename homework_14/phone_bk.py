@@ -1,7 +1,6 @@
 import sqlite3
 import re
 
-
 def is_phone_number(s: str) -> bool:
     return re.fullmatch(r'\+375 \((29|25|33|44)\)\d{3}-\d{2}-\d{2}', s) is not None
 
