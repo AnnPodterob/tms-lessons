@@ -2,7 +2,7 @@ import sqlite3
 import re
 
 def is_phone_number(s: str) -> bool:
-    return re.fullmatch(r'\+375 \((29|25|33|44)\)\d{3}-\d{2}-\d{2}', s) is not None
+    return re.fullmatch(r'\+375\((29|25|33|44)\)\d{3}-\d{2}-\d{2}', s) is not None
 
 def is_correct_input(s: str) -> bool:
     return re.fullmatch(r'[А-Яа-яA-Za-z]+', s) is not None
@@ -57,25 +57,25 @@ class Controller:
                 print('Добавление нового контакта')
                 name = str(input('Введите имя нового контакта (последовательно, фамилию имя отчество): '))
 
-                if is_correct_input(name) is False:
+                while is_correct_input(name) is False:
                     print('Введите Фамилию Имя и Отчетсво корректно! ')
                     name = str(input('Введите имя нового контакта (последовательно, фамилию имя отчество): '))
 
                 initials = str(input('Введите инициалы нового контакта: '))
 
-                if is_correct_initials(initials) is False:
+                while is_correct_initials(initials) is False:
                     print('Введите инициалы корректно!')
                     initials = str(input('Введите инициалы нового контакта ещё раз: '))
 
                 phone_number = str(input('Введите номер телефона, соответсвующий стандартному шаблону: '))
 
-                if is_phone_number(phone_number) is False:
+                while is_phone_number(phone_number) is False:
                     print('Введите номер КОРРЕКТНО. Например: +375(29)391-26-61')
                     phone_number = str(input('Введите номер телефона, соответсвующий стандартному шаблону: '))
 
                 place_of_residence = str(input('Введите место жительства нового контакта: '))
 
-                if is_correct_input(name) is False:
+                while is_correct_input(name) is False:
                     print('Введите Место жительства корректно! ')
                     place_of_residence = str(input('Введите место жительства нового контакта: '))
 
@@ -90,13 +90,13 @@ class Controller:
                 print('Обновление номера контакта')
                 name = str(input('Введите имя нового контакта (последовательно, фамилию имя отчество): '))
 
-                if is_correct_input(name) is False:
+                while is_correct_input(name) is False:
                     print('Введите Фамилию Имя и Отчетсво корректно! ')
                     name = str(input('Введите имя нового контакта (последовательно, фамилию имя отчество): '))
 
                 phone_number = str(input('Введите новый номер телефона контакта: '))
 
-                if is_phone_number(phone_number) is False:
+                while is_phone_number(phone_number) is False:
                     print('Введите номер КОРРЕКТНО. Например: +375(29)391-26-61')
                     phone_number = str(input('Введите номер телефона, соответсвующий стандартному шаблону: '))
 
