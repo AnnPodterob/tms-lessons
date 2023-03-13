@@ -31,7 +31,7 @@ class PhoneBook:
                 print(phone)
 
     def update_cont(self, name, phone_number):
-        new_phone = (name, phone_number)
+        new_phone = (phone_number, name)
         with sqlite3.connect('sqlite.db') as connection:
             connection.execute('update phonebook set phone_number = ? where name = ?', new_phone)
 
