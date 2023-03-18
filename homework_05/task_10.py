@@ -13,4 +13,4 @@ def get_most_frequent_word(text: str):
     most_frequent = [k for k, v in counter.items() if v == max_count]
     return min(most_frequent)
 
-print(get_most_frequent_word('bdh vip vip vip in in in dK'))
+print(get_most_frequent_word("hello this is a string with words and spaces and big big woooooooooord and and and"))

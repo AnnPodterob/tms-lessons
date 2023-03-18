@@ -8,4 +8,4 @@ def get_longest_world(text: str):
             pos = i
     return f[pos]
 
-print(get_longest_world('Reading practice to help you understand'))
+print(get_longest_world("hello this is a string with words and spaces and big big woooooooooord"))
